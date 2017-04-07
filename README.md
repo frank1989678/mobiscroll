@@ -1,5 +1,8 @@
 # mobiscroll
-参考资料 http://www.myexception.cn/web/1915230.html
+参考资料 
+1: http://www.myexception.cn/web/1915230.html
+2: http://www.cnblogs.com/headwolf/archive/2013/12/23/3487207.html
+
 
 <table>
     <thead>
@@ -41,6 +44,14 @@
             <td>String</td>
         </tr>
         <tr>
+            <td>invalid</td>
+            <td>无效日期
+            	<br>eg:{ daysOfWeek: [0, 6], daysOfMonth: ['5/1', '12/24', '12/25'] },
+ 			</td>
+            <td>无</td>
+            <td>Object</td>
+        </tr>
+        <tr>
             <td>showLabel</td>
             <td>显示标题（年/月/日/时/分）：
             	<br>false —— 不显示
@@ -69,3 +80,4 @@
         </tr>
     </tbody>
 </table>
+
