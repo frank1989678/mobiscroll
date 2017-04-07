@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>移动端日历</title>
+    <link rel="stylesheet" href="mobiscroll.css" />
+</head>
+<body>
+<input type="text" id="date" value="送货时间" />
+
+<script src="zepto.min.js"></script>
+<script src="mobiscroll.js"></script>
+
+<script>
+!(function($) {
+    var _global = {
+        fn: {
+            init: function() {
+                this.pickDate();
+            },
+            pickDate: function() {
+                var that = this,
+                    time = new Date(),
+                    year = time.getFullYear(),
+                    month = time.getMonth(),
+                    date = time.getDate();
+
+                $('#date').scroller({
+                    minDate: time,
+                    maxDate: new Date(year, month + 3, date),
+                    display: 'bottom',
+                    animate: 'slideup',
+                    // mode: 'mixed',
+                    // showLabel: true,
+                    //点击确定按钮，触发事件
+                    // onSelect: function(val) {
+                    //     that.date = val;
+                    // },
+                    preset: 'datetime',
+
+                });
+
+                $('#date').trigger('focus');
+            }
+        }
+    }
+    _global.fn.init();
+})(window.Zepto);
+
+</script>
+</body>
+</html>
